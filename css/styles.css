@@ -854,37 +854,4 @@ font-size: 30px;
 }
 
 }
-/* Mobile header fix */
-@media (max-width: 600px) {
-header {
-padding-left: 14px;
-padding-right: 14px;
-}
 
-.nav-container,
-.navbar,
-.site-header-inner {
-width: 100%;
-gap: 10px;
-}
-
-.logo img,
-.site-logo img {
-width: 90px;
-height: auto;
-}
-
-.site-title,
-.logo-text {
-font-size: 21px;
-line-height: 1.1;
-white-space: nowrap;
-}
-
-.menu-button,
-.menu-toggle {
-font-size: 18px;
-padding: 15px 18px;
-flex-shrink: 0;
-}
-}
