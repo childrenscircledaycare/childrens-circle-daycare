@@ -952,3 +952,93 @@ margin-top: 25px;
 height: 350px;
 }
 }
+/* Room program buttons */
+
+.room-button-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(150px, 1fr));
+gap: 22px;
+max-width: 1100px;
+margin: 35px auto 0;
+}
+
+.room-button {
+min-height: 190px;
+padding: 24px 18px;
+border: 2px solid transparent;
+border-radius: 24px;
+background: linear-gradient(
+145deg,
+#ffffff,
+var(--accent)
+);
+color: inherit;
+text-align: center;
+text-decoration: none;
+box-shadow: 0 8px 24px rgba(40, 52, 65, 0.09);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+transition:
+transform 0.2s ease,
+box-shadow 0.2s ease,
+border-color 0.2s ease;
+}
+
+.room-button:hover {
+transform: translateY(-6px);
+box-shadow: 0 16px 32px rgba(40, 52, 65, 0.15);
+border-color: var(--accent);
+}
+
+.room-button:focus-visible {
+outline: 3px solid #34495e;
+outline-offset: 4px;
+}
+
+.room-icon {
+display: block;
+margin-bottom: 12px;
+font-size: 38px;
+line-height: 1;
+}
+
+.room-button strong {
+display: block;
+font-size: 19px;
+line-height: 1.25;
+}
+
+.room-button .program-age {
+display: block;
+margin-top: 7px;
+font-size: 13px;
+line-height: 1.4;
+color: #68727d;
+}
+
+.learn-more {
+display: block;
+margin-top: 16px;
+font-size: 13px;
+font-weight: 700;
+color: #44536a;
+}
+
+@media (max-width: 900px) {
+.room-button-grid {
+grid-template-columns: repeat(2, minmax(150px, 1fr));
+}
+}
+
+@media (max-width: 520px) {
+.room-button-grid {
+grid-template-columns: 1fr;
+gap: 16px;
+}
+
+.room-button {
+min-height: 165px;
+}
+}
