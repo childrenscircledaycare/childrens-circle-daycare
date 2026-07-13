@@ -1702,3 +1702,18 @@ margin:0 auto;
 }
 
 }
+/* Alternate layout for Program Director */
+
+.director-section.alternate .director-grid {
+grid-template-columns: 1fr 350px;
+}
+
+@media (max-width: 900px) {
+.director-section.alternate .director-grid {
+grid-template-columns: 1fr;
+}
+
+.director-section.alternate .director-photo {
+order: -1;
+}
+}
