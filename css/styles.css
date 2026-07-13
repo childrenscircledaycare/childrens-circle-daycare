@@ -1441,3 +1441,136 @@ transition: 0.3s;
 background: #356db5;
 transform: translateY(-2px);
 }
+/* ========================================
+POLICIES AND DOCUMENTS PAGE
+======================================== */
+
+.policies-page {
+padding-bottom: 4rem;
+}
+
+.policies-intro {
+max-width: 850px;
+margin: 0 auto;
+padding-top: 4rem;
+padding-bottom: 2rem;
+text-align: center;
+}
+
+.policies-intro h1 {
+margin: 0.35rem 0 1rem;
+color: var(--navy-deep, #17324d);
+font-family: "Fraunces", Georgia, serif;
+font-size: clamp(2.4rem, 5vw, 4rem);
+line-height: 1.1;
+}
+
+.policies-intro p:last-child {
+max-width: 760px;
+margin: 0 auto;
+color: #52616d;
+font-size: 1.05rem;
+line-height: 1.75;
+}
+
+.policies-downloads {
+padding-top: 1rem;
+}
+
+.download-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 1.4rem;
+}
+
+.download-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+min-height: 330px;
+padding: 2rem;
+text-align: center;
+background: #ffffff;
+border: 1px solid rgba(23, 50, 77, 0.1);
+border-radius: 24px;
+box-shadow: 0 14px 35px rgba(23, 50, 77, 0.08);
+}
+
+.download-card:nth-child(1) {
+background: #f2f8f6;
+}
+
+.download-card:nth-child(2) {
+background: #fff9e9;
+}
+
+.download-card:nth-child(3) {
+background: #fff2ef;
+}
+
+.document-icon {
+display: grid;
+width: 58px;
+height: 58px;
+margin-bottom: 1rem;
+place-items: center;
+background: rgba(255, 255, 255, 0.8);
+border-radius: 50%;
+font-size: 1.6rem;
+}
+
+.download-card h2 {
+margin: 0 0 0.75rem;
+color: var(--navy-deep, #17324d);
+font-family: "Fraunces", Georgia, serif;
+font-size: 1.35rem;
+line-height: 1.35;
+}
+
+.download-card p {
+margin: 0 0 1.5rem;
+color: #66737d;
+line-height: 1.6;
+}
+
+.download-btn {
+display: inline-block;
+margin-top: auto;
+padding: 0.75rem 1.35rem;
+color: #ffffff;
+background: var(--navy-deep, #17324d);
+border-radius: 999px;
+font-weight: 700;
+text-decoration: none;
+transition:
+transform 0.2s ease,
+box-shadow 0.2s ease,
+background 0.2s ease;
+}
+
+.download-btn:hover,
+.download-btn:focus {
+transform: translateY(-2px);
+background: #244d70;
+box-shadow: 0 8px 18px rgba(23, 50, 77, 0.18);
+}
+
+@media (max-width: 900px) {
+.download-grid {
+grid-template-columns: 1fr;
+}
+
+.download-card {
+min-height: auto;
+}
+}
+
+@media (max-width: 600px) {
+.policies-intro {
+padding-top: 2.5rem;
+}
+
+.download-card {
+padding: 1.5rem;
+}
+}
