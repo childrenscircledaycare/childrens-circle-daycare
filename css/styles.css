@@ -163,8 +163,8 @@ display: block;
 .nav-links a {
   border-radius: 999px;
   color: var(--navy-deep);
-  font-size: 0.9rem;
-  font-weight: 900;
+  font-size: 1rem;
+  font-weight: 700;
   padding: 0.55rem 0.7rem;
   text-decoration: none;
 }
