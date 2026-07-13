@@ -1085,3 +1085,74 @@ padding: 14px 18px;
 margin-left: auto;
 }
 }
+/* Fix the More dropdown menu */
+.nav-dropdown {
+position: relative;
+display: inline-flex;
+align-items: center;
+}
+
+.dropdown-toggle {
+background: transparent;
+border: none;
+color: inherit;
+font: inherit;
+font-weight: 700;
+cursor: pointer;
+padding: 10px 12px;
+}
+
+/* Keep the three links hidden */
+.nav-dropdown .dropdown-menu {
+display: none !important;
+position: absolute;
+top: 100%;
+right: 0;
+min-width: 230px;
+padding: 8px;
+background: white;
+border-radius: 10px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+z-index: 1000;
+}
+
+/* Show them only when More is hovered or selected */
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+display: block !important;
+}
+
+.nav-dropdown .dropdown-menu a {
+display: block;
+padding: 10px 14px;
+color: #333;
+text-decoration: none;
+white-space: nowrap;
+border-radius: 7px;
+}
+
+.nav-dropdown .dropdown-menu a:hover {
+background: #eef7f4;
+}
+
+/* Mobile version */
+@media (max-width: 760px) {
+.nav-dropdown {
+display: block;
+width: 100%;
+}
+
+.dropdown-toggle {
+width: 100%;
+text-align: left;
+}
+
+.nav-dropdown .dropdown-menu {
+position: static;
+width: 100%;
+min-width: 0;
+margin-top: 4px;
+box-shadow: none;
+background: transparent;
+}
+}
