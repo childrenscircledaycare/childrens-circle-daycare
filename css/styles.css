@@ -1983,165 +1983,151 @@ max-width: 680px;
 margin: 0 auto;
 }
 }
-/* Daily routine room buttons */
+/* CENTRE LIFE DAILY ROUTINES */
 
-.routine-section {
-padding: 70px 6%;
-background: #fffdf8;
+.daily-routines-section {
+width: 100%;
+padding: 65px 5%;
+background-color: #fffdf8;
+box-sizing: border-box;
 }
 
-.section-heading {
-max-width: 720px;
+.daily-routines-heading {
+max-width: 750px;
 margin: 0 auto 38px;
 text-align: center;
 }
 
-.section-heading .eyebrow {
-margin-bottom: 8px;
-color: #4f8b8b;
-font-weight: 700;
-letter-spacing: 1px;
-text-transform: uppercase;
-}
-
-.section-heading h2 {
-margin-bottom: 12px;
-font-size: clamp(2rem, 4vw, 3rem);
+.daily-routines-heading h2 {
+margin: 0 0 12px;
 color: #263238;
+font-size: 42px;
+line-height: 1.2;
 }
 
-.section-heading p {
-color: #5d6668;
-line-height: 1.7;
+.daily-routines-heading p {
+margin: 0;
+color: #616b6e;
+font-size: 17px;
 }
 
-.routine-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
+.daily-routines-grid {
+display: grid !important;
+grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
 gap: 22px;
+width: 100%;
 max-width: 1200px;
 margin: 0 auto;
 }
 
-.routine-card {
+.daily-routine-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+width: 100%;
+min-width: 0;
 min-height: 205px;
-padding: 28px 20px;
-border: 0;
-border-radius: 24px;
-background: #eef8fb;
-box-shadow: 0 10px 25px rgba(48, 66, 70, 0.08);
+padding: 25px 18px;
+
+border: none;
+border-radius: 22px;
+background-color: #edf7fb;
+box-shadow: 0 8px 22px rgba(44, 62, 68, 0.09);
+
+color: #263238;
 font-family: inherit;
 text-align: center;
 cursor: pointer;
+
 transition:
 transform 0.25s ease,
 box-shadow 0.25s ease;
 }
 
-.routine-card:nth-child(2),
-.routine-card:nth-child(6) {
-background: #fff8dc;
+.daily-routine-card:nth-child(2),
+.daily-routine-card:nth-child(6) {
+background-color: #fff7d8;
 }
 
-.routine-card:nth-child(3),
-.routine-card:nth-child(7) {
-background: #f2fbf3;
+.daily-routine-card:nth-child(3),
+.daily-routine-card:nth-child(7) {
+background-color: #edf8ef;
 }
 
-.routine-card:nth-child(4),
-.routine-card:nth-child(8) {
-background: #fff0ed;
+.daily-routine-card:nth-child(4),
+.daily-routine-card:nth-child(8) {
+background-color: #fff0ed;
 }
 
-.routine-card:hover,
-.routine-card:focus-visible {
-transform: translateY(-7px);
-box-shadow: 0 16px 34px rgba(48, 66, 70, 0.15);
+.daily-routine-card:nth-child(5),
+.daily-routine-card:nth-child(9) {
+background-color: #f2effb;
 }
 
-.routine-icon,
-.routine-name,
-.routine-type,
-.routine-link {
+.daily-routine-card:hover,
+.daily-routine-card:focus-visible {
+transform: translateY(-6px);
+box-shadow: 0 15px 32px rgba(44, 62, 68, 0.16);
+}
+
+.daily-routine-icon,
+.daily-routine-name,
+.daily-routine-program,
+.daily-routine-link {
 display: block;
 }
 
-.routine-icon {
-margin-bottom: 14px;
+.daily-routine-icon {
+margin-bottom: 13px;
+font-size: 34px;
+line-height: 1;
+}
+
+.daily-routine-name {
+margin-bottom: 7px;
+font-size: 21px;
+font-weight: 700;
+}
+
+.daily-routine-program {
+margin-bottom: 22px;
+color: #657073;
+font-size: 15px;
+}
+
+.daily-routine-link {
+color: #315f68;
+font-size: 14px;
+font-weight: 700;
+}
+
+/* Tablet */
+
+@media (max-width: 950px) {
+.daily-routines-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+}
+
+/* Mobile */
+
+@media (max-width: 560px) {
+.daily-routines-section {
+padding: 48px 18px;
+}
+
+.daily-routines-heading h2 {
 font-size: 34px;
 }
 
-.routine-name {
-margin-bottom: 7px;
-color: #263238;
-font-size: 1.25rem;
-font-weight: 700;
+.daily-routines-grid {
+grid-template-columns: 1fr !important;
 }
 
-.routine-type {
-margin-bottom: 22px;
-color: #626e70;
-font-size: 0.95rem;
+.daily-routine-card {
+min-height: 180px;
+}
 }
 
-.routine-link {
-color: #315f68;
-font-size: 0.9rem;
-font-weight: 700;
-}
-
-/* DAILY ROUTINE POPUP */
-
-.routine-card{
-cursor:pointer;
-}
-
-.schedule-modal{
-display:none;
-position:fixed;
-z-index:9999;
-left:0;
-top:0;
-width:100%;
-height:100%;
-overflow:auto;
-background:rgba(0,0,0,.75);
-}
-
-.schedule-content{
-
-background:white;
-margin:4% auto;
-padding:30px;
-width:90%;
-max-width:900px;
-
-border-radius:20px;
-
-text-align:center;
-}
-
-.schedule-content img{
-
-width:100%;
-border-radius:15px;
-
-}
-
-.close-modal{
-
-position:absolute;
-right:30px;
-top:20px;
-
-color:white;
-font-size:48px;
-
-cursor:pointer;
-}
-
-.schedule-content h2{
-
-margin-bottom:20px;
-
-}
