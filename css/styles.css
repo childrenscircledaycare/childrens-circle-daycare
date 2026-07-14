@@ -1841,3 +1841,145 @@ order:-1;
 }
 
 }
+/* Consistent About Us leadership layout */
+
+.about-intro {
+max-width: 900px;
+margin: 0 auto;
+padding-top: 5rem;
+padding-bottom: 4rem;
+text-align: center;
+}
+
+.about-intro h1 {
+margin: 0.4rem auto 1.25rem;
+color: var(--navy-deep, #17324d);
+font-family: "Fraunces", Georgia, serif;
+font-size: clamp(2.6rem, 5vw, 4.5rem);
+line-height: 1.08;
+}
+
+.about-intro > p:last-child {
+max-width: 760px;
+margin: 0 auto;
+font-size: 1.1rem;
+line-height: 1.8;
+}
+
+.director-section {
+padding: 5rem 1.5rem;
+}
+
+.director-section:nth-of-type(even) {
+background: rgba(238, 247, 244, 0.55);
+}
+
+.director-grid {
+display: grid;
+grid-template-columns: minmax(280px, 420px) minmax(0, 650px);
+gap: clamp(2.5rem, 6vw, 5rem);
+align-items: center;
+width: min(1120px, 100%);
+margin: 0 auto;
+}
+
+.director-section.alternate .director-photo {
+order: 2;
+}
+
+.director-section.alternate .director-content {
+order: 1;
+}
+
+.director-photo img {
+display: block;
+width: 100%;
+aspect-ratio: 4 / 5;
+object-fit: cover;
+border-radius: 26px;
+box-shadow: 0 16px 38px rgba(23, 50, 77, 0.14);
+}
+
+.photo-caption {
+margin: 0.8rem 0 0;
+text-align: center;
+font-size: 0.9rem;
+color: #66727b;
+}
+
+.director-content {
+max-width: 650px;
+}
+
+.director-content h2 {
+margin: 0.35rem 0 0.7rem;
+color: var(--navy-deep, #17324d);
+font-family: "Fraunces", Georgia, serif;
+font-size: clamp(2.4rem, 4.5vw, 4rem);
+line-height: 1.08;
+}
+
+.director-content h3 {
+margin: 0 0 0.4rem;
+color: var(--navy-deep, #17324d);
+font-family: "Fraunces", Georgia, serif;
+font-size: 1.55rem;
+}
+
+.director-title {
+margin: 0 0 1.5rem;
+font-weight: 700;
+color: #56636d;
+}
+
+.director-content > p:not(.eyebrow):not(.director-title) {
+font-size: 1.05rem;
+line-height: 1.8;
+}
+
+.about-approach {
+max-width: 900px;
+margin: 0 auto;
+padding-top: 5rem;
+padding-bottom: 5rem;
+text-align: center;
+}
+
+.about-approach h2 {
+color: var(--navy-deep, #17324d);
+font-family: "Fraunces", Georgia, serif;
+font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.about-approach p:last-child {
+max-width: 760px;
+margin: 1rem auto 0;
+font-size: 1.08rem;
+line-height: 1.8;
+}
+
+@media (max-width: 800px) {
+.director-section {
+padding: 3.5rem 1.25rem;
+}
+
+.director-grid {
+grid-template-columns: 1fr;
+gap: 2rem;
+}
+
+.director-section.alternate .director-photo,
+.director-section.alternate .director-content {
+order: initial;
+}
+
+.director-photo {
+max-width: 480px;
+margin: 0 auto;
+}
+
+.director-content {
+max-width: 680px;
+margin: 0 auto;
+}
+}
