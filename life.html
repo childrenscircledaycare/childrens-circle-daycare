@@ -35,77 +35,104 @@ More ▾
 
 <div class="daily-routines-heading">
 <h2>Daily Routines</h2>
-<p>Click on a classroom to view their daily routine.</p>
+<p>Click on a classroom to view its daily routine.</p>
 </div>
 
 <div class="daily-routines-grid">
 
-<button class="daily-routine-card"
+<button
+class="daily-routine-card active"
 data-title="Sweet Peas"
 data-image="images/sweetpeas-schedule.png">
+
 <span class="daily-routine-icon">🍼</span>
 <span class="daily-routine-name">Sweet Peas</span>
 <span class="daily-routine-program">Infant Program</span>
 <span class="daily-routine-link">View Routine →</span>
 </button>
 
-<button class="daily-routine-card"
+<button
+class="daily-routine-card"
 data-title="Toddlers"
 data-image="images/toddlers-schedule.png">
+
 <span class="daily-routine-icon">🧸</span>
 <span class="daily-routine-name">Toddlers</span>
 <span class="daily-routine-program">Toddler Program</span>
 <span class="daily-routine-link">View Routine →</span>
 </button>
 
-<button class="daily-routine-card"
+<button
+class="daily-routine-card"
 data-title="Hunny Bears"
 data-image="images/hunnybears-schedule.png">
+
 <span class="daily-routine-icon">🐻</span>
 <span class="daily-routine-name">Hunny Bears</span>
 <span class="daily-routine-program">Preschool Program</span>
 <span class="daily-routine-link">View Routine →</span>
 </button>
 
-<button class="daily-routine-card"
+<button
+class="daily-routine-card"
 data-title="Sesames"
 data-image="images/sesames-schedule.png">
+
 <span class="daily-routine-icon">🌻</span>
 <span class="daily-routine-name">Sesames</span>
 <span class="daily-routine-program">Preschool Program</span>
 <span class="daily-routine-link">View Routine →</span>
 </button>
 
-<button class="daily-routine-card"
+<button
+class="daily-routine-card"
 data-title="Dinos"
 data-image="images/dinos-schedule.png">
+
 <span class="daily-routine-icon">🦕</span>
 <span class="daily-routine-name">Dinos</span>
 <span class="daily-routine-program">Preschool Program</span>
 <span class="daily-routine-link">View Routine →</span>
 </button>
 
-<button class="daily-routine-card"
+<button
+class="daily-routine-card"
+data-title="Kindergarten"
+data-image="images/kindergarten-schedule.png">
+
+<span class="daily-routine-icon">🎒</span>
+<span class="daily-routine-name">Kindergarten</span>
+<span class="daily-routine-program">Kindergarten Program</span>
+<span class="daily-routine-link">View Routine →</span>
+</button>
+
+<button
+class="daily-routine-card"
 data-title="Cool Cats"
 data-image="images/coolcats-schedule.png">
+
 <span class="daily-routine-icon">🐱</span>
 <span class="daily-routine-name">Cool Cats</span>
 <span class="daily-routine-program">School Age Program</span>
 <span class="daily-routine-link">View Routine →</span>
 </button>
 
-<button class="daily-routine-card"
+<button
+class="daily-routine-card"
 data-title="Hot Shots"
 data-image="images/hotshots-schedule.png">
+
 <span class="daily-routine-icon">⚽</span>
 <span class="daily-routine-name">Hot Shots</span>
 <span class="daily-routine-program">School Age Program</span>
 <span class="daily-routine-link">View Routine →</span>
 </button>
 
-<button class="daily-routine-card"
+<button
+class="daily-routine-card"
 data-title="Room Above"
 data-image="images/roomabove-schedule.png">
+
 <span class="daily-routine-icon">⭐</span>
 <span class="daily-routine-name">Room Above</span>
 <span class="daily-routine-program">School Age Program</span>
@@ -113,6 +140,22 @@ data-image="images/roomabove-schedule.png">
 </button>
 
 </div>
+
+<div class="selected-routine" id="selectedRoutine">
+
+<h2 id="selectedRoutineTitle">
+Sweet Peas Daily Routine
+</h2>
+
+<div class="selected-routine-image">
+<img
+id="selectedRoutineImage"
+src="images/sweetpeas-schedule.png"
+alt="Sweet Peas daily routine">
+</div>
+
+</div>
+
 </section>
 
 <div id="scheduleModal" class="schedule-modal">
