@@ -1749,3 +1749,17 @@ transition: all .25s ease;
 background: #2b6cb0;
 color: #fff;
 }
+/* Fit full desktop navigation */
+@media (min-width: 901px) {
+.nav-wrap {
+gap: 0.75rem;
+}
+
+.brand {
+flex-shrink: 1;
+min-width: 0;
+}
+
+.brand img {
+width: 58px;
+}
