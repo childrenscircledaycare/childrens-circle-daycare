@@ -31,115 +31,99 @@ More ▾
 </nav>
     </div>
   </header>
-<main id="main"><section class="routine-section">
-<div class="section-heading">
-<p class="eyebrow">A Day at Children’s Circle</p>
+<main id="main"><section class="programs">
+<div class="section-title">
 <h2>Daily Routines</h2>
-<p>
-Hover over or select a room to view its daily routine.
-</p>
+<p>Click on a classroom to view their daily routine.</p>
 </div>
 
-<div class="routine-grid">
+<div class="program-grid">
 
-<button class="routine-card"
-data-image="sweet-peas-routine.png"
-data-room="Sweet Peas">
-<span class="routine-icon">🍼</span>
-<span class="routine-name">Sweet Peas</span>
-<span class="routine-type">Infant Program</span>
-<span class="routine-link">View Daily Routine →</span>
-</button>
+<div class="program-card routine-card"
+data-title="Sweet Peas"
+data-image="images/sweetpeas-schedule.png">
+<div class="icon">🍼</div>
+<h3>Sweet Peas</h3>
+<p>Infant Program</p>
+<span>View Routine →</span>
+</div>
 
-<button class="routine-card"
-data-image="toddlers-routine.png"
-data-room="Toddlers">
-<span class="routine-icon">🧸</span>
-<span class="routine-name">Toddlers</span>
-<span class="routine-type">Toddler Program</span>
-<span class="routine-link">View Daily Routine →</span>
-</button>
+<div class="program-card routine-card"
+data-title="Toddlers"
+data-image="images/toddlers-schedule.png">
+<div class="icon">🧸</div>
+<h3>Toddlers</h3>
+<p>Toddler Program</p>
+<span>View Routine →</span>
+</div>
 
-<button class="routine-card"
-data-image="hunny-bears-routine.png"
-data-room="Hunny Bears">
-<span class="routine-icon">🐻</span>
-<span class="routine-name">Hunny Bears</span>
-<span class="routine-type">Preschool Program</span>
-<span class="routine-link">View Daily Routine →</span>
-</button>
+<div class="program-card routine-card"
+data-title="Hunny Bears"
+data-image="images/hunnybears-schedule.png">
+<div class="icon">🐻</div>
+<h3>Hunny Bears</h3>
+<p>Preschool Program</p>
+<span>View Routine →</span>
+</div>
 
-<button class="routine-card"
-data-image="sesames-routine.png"
-data-room="Sesames">
-<span class="routine-icon">🌻</span>
-<span class="routine-name">Sesames</span>
-<span class="routine-type">Preschool Program</span>
-<span class="routine-link">View Daily Routine →</span>
-</button>
+<div class="program-card routine-card"
+data-title="Sesames"
+data-image="images/sesames-schedule.png">
+<div class="icon">🌻</div>
+<h3>Sesames</h3>
+<p>Preschool Program</p>
+<span>View Routine →</span>
+</div>
 
-<button class="routine-card"
-data-image="dinos-routine.png"
-data-room="Dinos">
-<span class="routine-icon">🦕</span>
-<span class="routine-name">Dinos</span>
-<span class="routine-type">Preschool Program</span>
-<span class="routine-link">View Daily Routine →</span>
-</button>
+<div class="program-card routine-card"
+data-title="Dinos"
+data-image="images/dinos-schedule.png">
+<div class="icon">🦕</div>
+<h3>Dinos</h3>
+<p>Preschool Program</p>
+<span>View Routine →</span>
+</div>
 
-<button class="routine-card"
-data-image="kindergarten-routine.png"
-data-room="Kindergarten">
-<span class="routine-icon">🎒</span>
-<span class="routine-name">Kindergarten</span>
-<span class="routine-type">Kindergarten Program</span>
-<span class="routine-link">View Daily Routine →</span>
-</button>
+<div class="program-card routine-card"
+data-title="Kindergarten"
+data-image="images/kindergarten-schedule.png">
+<div class="icon">🎒</div>
+<h3>Kindergarten</h3>
+<p>Kindergarten Program</p>
+<span>View Routine →</span>
+</div>
 
-<button class="routine-card"
-data-image="cool-cats-routine.png"
-data-room="Cool Cats">
-<span class="routine-icon">🐱</span>
-<span class="routine-name">Cool Cats</span>
-<span class="routine-type">School Age Program</span>
-<span class="routine-link">View Daily Routine →</span>
-</button>
+<div class="program-card routine-card"
+data-title="Cool Cats"
+data-image="images/coolcats-schedule.png">
+<div class="icon">🐱</div>
+<h3>Cool Cats</h3>
+<p>School Age Program</p>
+<span>View Routine →</span>
+</div>
 
-<button class="routine-card"
-data-image="hot-shots-routine.png"
-data-room="Hot Shots">
-<span class="routine-icon">⚽</span>
-<span class="routine-name">Hot Shots</span>
-<span class="routine-type">School Age Program</span>
-<span class="routine-link">View Daily Routine →</span>
-</button>
-
-<button class="routine-card"
-data-image="room-above-routine.png"
-data-room="Room Above">
-<span class="routine-icon">⭐</span>
-<span class="routine-name">Room Above</span>
-<span class="routine-type">School Age Program</span>
-<span class="routine-link">View Daily Routine →</span>
-</button>
+<div class="program-card routine-card"
+data-title="Hot Shots"
+data-image="images/hotshots-schedule.png">
+<div class="icon">⚽</div>
+<h3>Hot Shots</h3>
+<p>School Age Program</p>
+<span>View Routine →</span>
+</div>
 
 </div>
 </section>
 
-<div class="routine-preview" id="routinePreview">
-<div class="routine-preview-box">
-<button
-class="routine-close"
-id="routineClose"
-aria-label="Close daily routine">
-×
-</button>
+<div id="scheduleModal" class="schedule-modal">
 
-<h3 id="routineTitle">Daily Routine</h3>
+<span class="close-modal">&times;</span>
 
-<img
-id="routineImage"
-src=""
-alt="">
+<div class="schedule-content">
+
+<h2 id="scheduleTitle"></h2>
+
+<img id="scheduleImage" src="" alt="">
+
 </div>
+
 </div></section><section class="soft-band"><div class="section"><h2>What children experience</h2><div class="grid three"><article class="card"><h3>Outdoor play</h3><p>Fresh air, movement, seasonal observation, and active games.</p></article><article class="card"><h3>Creative expression</h3><p>Art, music, dramatic play, building, and storytelling.</p></article><article class="card"><h3>Belonging</h3><p>Small moments of care help children practise empathy and friendship.</p></article></div></div></section></main><footer class="site-footer"><div class="footer-inner"><span>© Children’s Circle Daycare</span><span><a href="mailto:info@childrenscircledaycare.com">info@childrenscircledaycare.com</a> · <a href="tel:14164615151">416-461-5151</a></span></div></footer><script src="js/main.js"></script></body></html>
