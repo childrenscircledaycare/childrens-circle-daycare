@@ -1763,3 +1763,34 @@ min-width: 0;
 .brand img {
 width: 58px;
 }
+
+.brand span {
+font-size: 17px;
+line-height: 1.05;
+}
+
+.nav-links {
+flex-wrap: nowrap;
+gap: 0.05rem;
+}
+
+.nav-links > a,
+.dropdown-toggle {
+flex-shrink: 0;
+padding: 0.4rem 0.38rem;
+font-size: 0.86rem;
+white-space: nowrap;
+}
+
+.tour-btn,
+.waitlist-btn {
+padding: 0.55rem 0.65rem !important;
+font-size: 0.78rem !important;
+line-height: 1.15;
+text-align: center;
+}
+
+.tour-btn {
+border-width: 1.5px;
+}
+}
