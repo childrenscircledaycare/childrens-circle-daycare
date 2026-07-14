@@ -1452,19 +1452,20 @@ padding-bottom: 4rem;
 }
 
 .policies-intro {
-max-width: 1100px;
+max-width: 900px;
 margin: 0 auto;
 padding-top: 4rem;
-padding-bottom: 2rem;
+padding-bottom: 2.5rem;
 text-align: center;
 }
 
 .policies-intro h1 {
+  display: inline-block;
 margin: 0.35rem 0 1rem;
 color: var(--navy-deep, #17324d);
 font-family: "Fraunces", Georgia, serif;
 font-size: clamp(2.4rem, 5vw, 4rem);
-line-height: 1.1;
+line-height: 1.05;
 text-align: center;
 }
 
