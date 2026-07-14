@@ -1464,6 +1464,7 @@ color: var(--navy-deep, #17324d);
 font-family: "Fraunces", Georgia, serif;
 font-size: clamp(2.4rem, 5vw, 4rem);
 line-height: 1.1;
+text-align: center;
 }
 
 .policies-intro p:last-child {
