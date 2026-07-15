@@ -2327,3 +2327,142 @@ padding: 26px 20px;
 font-size: 26px;
 }
 }
+/* HOW DOES LEARNING HAPPEN FOUNDATION CARDS */
+
+.foundations-section {
+width: 100%;
+padding: 65px 6%;
+background: #fffdf8;
+box-sizing: border-box;
+}
+
+.foundations-heading {
+max-width: 850px;
+margin: 0 auto 40px;
+text-align: center;
+}
+
+.foundations-heading h2 {
+margin: 0 0 18px;
+color: #263238;
+font-size: clamp(2.2rem, 5vw, 4rem);
+line-height: 1.08;
+}
+
+.foundations-heading p {
+max-width: 760px;
+margin: 0 auto;
+color: #5f696c;
+font-size: 17px;
+line-height: 1.7;
+}
+
+.foundations-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 22px;
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.foundation-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+
+min-height: 275px;
+padding: 32px 24px;
+
+border-radius: 24px;
+box-shadow: 0 10px 26px rgba(48, 66, 70, 0.09);
+
+text-align: center;
+
+transition:
+transform 0.25s ease,
+box-shadow 0.25s ease;
+}
+
+.foundation-card:hover {
+transform: translateY(-7px);
+box-shadow: 0 17px 35px rgba(48, 66, 70, 0.16);
+}
+
+.belonging-card {
+background: #e9f5fb;
+}
+
+.wellbeing-card {
+background: #fff4db;
+}
+
+.engagement-card {
+background: #edf8ef;
+}
+
+.expression-card {
+background: #fff0ed;
+}
+
+.foundation-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+
+width: 62px;
+height: 62px;
+margin-bottom: 18px;
+
+border-radius: 18px;
+background: rgba(255, 255, 255, 0.65);
+
+font-size: 30px;
+}
+
+.foundation-card h3 {
+margin: 0 0 15px;
+color: #263238;
+font-size: 24px;
+}
+
+.foundation-card p {
+margin: 0;
+color: #586568;
+font-size: 15px;
+line-height: 1.65;
+}
+
+/* Tablet */
+
+@media (max-width: 950px) {
+.foundations-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+
+/* Mobile */
+
+@media (max-width: 560px) {
+.foundations-section {
+padding: 48px 18px;
+}
+
+.foundations-heading h2 {
+font-size: 35px;
+}
+
+.foundations-heading p {
+font-size: 16px;
+}
+
+.foundations-grid {
+grid-template-columns: 1fr;
+}
+
+.foundation-card {
+min-height: auto;
+padding: 28px 22px;
+}
+}
