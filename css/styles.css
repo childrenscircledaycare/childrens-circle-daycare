@@ -2640,10 +2640,12 @@ text-transform: uppercase;
 }
 
 .storypark-hero h1 {
-margin: 0 0 24px;
+max-width: 650px;
+margin: 0 auto; 24px;
 color: #263238;
 font-size: clamp(2.8rem, 6vw, 5rem);
 line-height: 1.05;
+text-align; center;
 }
 
 .storypark-intro {
