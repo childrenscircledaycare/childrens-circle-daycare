@@ -2609,3 +2609,280 @@ font-size: 16px;
 padding: 28px 22px;
 }
 }
+/* STORYPARK PAGE */
+
+.storypark-hero {
+padding: 90px 6%;
+background:
+linear-gradient(
+135deg,
+rgba(232, 246, 250, 0.96),
+rgba(255, 247, 220, 0.96)
+);
+}
+
+.storypark-hero-content {
+max-width: 900px;
+margin: 0 auto;
+text-align: center;
+}
+
+.storypark-hero .eyebrow,
+.storypark-heading .eyebrow,
+.storypark-connection-text .eyebrow,
+.storypark-privacy-content .eyebrow {
+margin: 0 0 12px;
+color: #4f8088;
+font-size: 14px;
+font-weight: 700;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+}
+
+.storypark-hero h1 {
+margin: 0 0 24px;
+color: #263238;
+font-size: clamp(2.8rem, 6vw, 5rem);
+line-height: 1.05;
+}
+
+.storypark-intro {
+max-width: 790px;
+margin: 0 auto;
+color: #566467;
+font-size: 18px;
+line-height: 1.8;
+}
+
+
+/* DAILY INFORMATION */
+
+.storypark-section {
+padding: 75px 6%;
+background: #fffdf8;
+}
+
+.storypark-heading {
+max-width: 800px;
+margin: 0 auto 42px;
+text-align: center;
+}
+
+.storypark-heading h2 {
+margin: 0 0 18px;
+color: #263238;
+font-size: clamp(2.2rem, 5vw, 3.8rem);
+line-height: 1.1;
+}
+
+.storypark-heading > p:last-child {
+margin: 0;
+color: #5c686b;
+font-size: 17px;
+line-height: 1.75;
+}
+
+.storypark-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 22px;
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.storypark-card {
+min-height: 275px;
+padding: 32px 24px;
+border-radius: 24px;
+background: #eaf6fb;
+box-shadow: 0 10px 27px rgba(48, 66, 70, 0.09);
+text-align: center;
+transition:
+transform 0.25s ease,
+box-shadow 0.25s ease;
+}
+
+.storypark-card:nth-child(2) {
+background: #fff5d9;
+}
+
+.storypark-card:nth-child(3) {
+background: #edf8ef;
+}
+
+.storypark-card:nth-child(4) {
+background: #fff0ed;
+}
+
+.storypark-card:hover {
+transform: translateY(-7px);
+box-shadow: 0 17px 36px rgba(48, 66, 70, 0.16);
+}
+
+.storypark-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 64px;
+height: 64px;
+margin: 0 auto 20px;
+border-radius: 18px;
+background: rgba(255, 255, 255, 0.72);
+font-size: 31px;
+}
+
+.storypark-card h3 {
+margin: 0 0 14px;
+color: #263238;
+font-size: 22px;
+line-height: 1.25;
+}
+
+.storypark-card p {
+margin: 0;
+color: #5a6669;
+font-size: 15px;
+line-height: 1.7;
+}
+
+
+/* FAMILY AND EDUCATOR CONNECTION */
+
+.storypark-connection-section {
+padding: 75px 6%;
+background: #f5faf8;
+}
+
+.storypark-connection-content {
+display: grid;
+grid-template-columns: 1.4fr 0.8fr;
+align-items: center;
+gap: 45px;
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.storypark-connection-text h2 {
+margin: 0 0 20px;
+color: #263238;
+font-size: clamp(2.2rem, 4vw, 3.5rem);
+line-height: 1.1;
+}
+
+.storypark-connection-text p {
+margin: 0 0 16px;
+color: #5a6669;
+font-size: 17px;
+line-height: 1.75;
+}
+
+.storypark-highlight-box {
+padding: 36px 30px;
+border-radius: 26px;
+background: #ffffff;
+box-shadow: 0 12px 30px rgba(48, 66, 70, 0.1);
+text-align: center;
+}
+
+.storypark-highlight-icon {
+display: block;
+margin-bottom: 16px;
+font-size: 42px;
+}
+
+.storypark-highlight-box h3 {
+margin: 0 0 13px;
+color: #263238;
+font-size: 24px;
+}
+
+.storypark-highlight-box p {
+margin: 0;
+color: #5a6669;
+font-size: 15px;
+line-height: 1.7;
+}
+
+
+/* PRIVACY */
+
+.storypark-privacy-section {
+padding: 60px 6%;
+background: #fff8e9;
+}
+
+.storypark-privacy-content {
+display: flex;
+align-items: center;
+gap: 28px;
+max-width: 900px;
+margin: 0 auto;
+padding: 35px;
+border-radius: 24px;
+background: #ffffff;
+box-shadow: 0 10px 27px rgba(48, 66, 70, 0.09);
+}
+
+.storypark-privacy-icon {
+flex-shrink: 0;
+font-size: 50px;
+}
+
+.storypark-privacy-content h2 {
+margin: 0 0 12px;
+color: #263238;
+font-size: 30px;
+}
+
+.storypark-privacy-content p:last-child {
+margin: 0;
+color: #5a6669;
+font-size: 16px;
+line-height: 1.7;
+}
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+.storypark-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.storypark-connection-content {
+grid-template-columns: 1fr;
+}
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+.storypark-hero {
+padding: 65px 18px;
+}
+
+.storypark-section,
+.storypark-connection-section {
+padding: 52px 18px;
+}
+
+.storypark-grid {
+grid-template-columns: 1fr;
+}
+
+.storypark-card {
+min-height: auto;
+}
+
+.storypark-privacy-section {
+padding: 45px 18px;
+}
+
+.storypark-privacy-content {
+flex-direction: column;
+padding: 28px 22px;
+text-align: center;
+}
+}
