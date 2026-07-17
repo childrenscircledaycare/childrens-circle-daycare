@@ -2950,3 +2950,95 @@ max-width:700px;
 .storypark-heading .eyebrow{
 margin:0;
 }
+/* =========================================
+FREQUENTLY ASKED QUESTIONS PAGE
+========================================= */
+
+.faq-page {
+padding: 3rem 1.25rem 5rem;
+}
+
+.faq-intro {
+max-width: 850px;
+margin: 0 auto 2.5rem;
+text-align: center;
+}
+
+.faq-intro h1 {
+margin: 0.35rem 0 1rem;
+text-align: center;
+}
+
+.faq-lead {
+max-width: 700px;
+margin: 0 auto;
+font-size: 1.08rem;
+line-height: 1.7;
+}
+
+.faq-grid {
+max-width: 1180px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 1.5rem;
+}
+
+.faq-card {
+background: #ffffff;
+padding: 1.8rem;
+border-radius: 24px;
+box-shadow: 0 10px 28px rgba(41, 59, 73, 0.09);
+}
+
+.faq-card h2 {
+margin-top: 0;
+margin-bottom: 0.85rem;
+font-size: 1.45rem;
+line-height: 1.25;
+}
+
+.faq-card p {
+margin: 0 0 0.8rem;
+line-height: 1.7;
+}
+
+.faq-btn {
+display: inline-block;
+margin-top: 0.6rem;
+padding: 0.8rem 1.35rem;
+border-radius: 999px;
+background: #4b9ed3;
+color: #ffffff;
+text-decoration: none;
+font-weight: 700;
+transition:
+transform 0.2s ease,
+box-shadow 0.2s ease;
+}
+
+.faq-btn:hover,
+.faq-btn:focus {
+color: #ffffff;
+transform: translateY(-2px);
+box-shadow: 0 8px 18px rgba(41, 112, 158, 0.22);
+}
+
+@media (max-width: 760px) {
+
+.faq-page {
+padding: 2.25rem 1rem 4rem;
+}
+
+.faq-grid {
+grid-template-columns: 1fr;
+}
+
+.faq-card {
+padding: 1.4rem;
+}
+
+.faq-card h2 {
+font-size: 1.3rem;
+}
+}
