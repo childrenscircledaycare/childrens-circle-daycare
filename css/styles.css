@@ -3043,48 +3043,196 @@ font-size: 1.3rem;
 }
 }
 /* =========================================
-ACCESSIBILITY TOOLBAR
+ACCESSIBILITY DROPDOWN
 ========================================= */
 
-.accessibility-toolbar {
+.accessibility-menu {
+position: relative;
 display: flex;
 justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-gap: 0.6rem;
-padding: 0.75rem 1rem;
-background: #f3f7f8;
+padding: 0.6rem 1rem;
+background: #f7f8f6;
 border-bottom: 1px solid rgba(35, 55, 65, 0.12);
+z-index: 1000;
 }
 
-.accessibility-toolbar button {
-border: 2px solid #315d72;
+.accessibility-toggle {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 0.45rem;
+border: 1.5px solid #315d72;
 background: #ffffff;
 color: #263c48;
 border-radius: 999px;
-padding: 0.55rem 0.9rem;
+padding: 0.45rem 0.85rem;
 font: inherit;
+font-size: 0.9rem;
 font-weight: 700;
+line-height: 1.2;
 cursor: pointer;
+transition:
+background 0.2s ease,
+color 0.2s ease,
+transform 0.2s ease;
 }
 
-.accessibility-toolbar button:hover,
-.accessibility-toolbar button:focus-visible {
+.accessibility-toggle:hover {
 background: #315d72;
 color: #ffffff;
 }
 
-.accessibility-toolbar button:focus-visible {
-outline: 3px solid #f2b84b;
+.accessibility-toggle:active {
+transform: scale(0.98);
+}
+
+.accessibility-arrow {
+display: inline-block;
+font-size: 0.65rem;
+transition: transform 0.2s ease;
+}
+
+.accessibility-toggle[aria-expanded="true"] .accessibility-arrow {
+transform: rotate(180deg);
+}
+
+.accessibility-panel {
+position: absolute;
+top: calc(100% + 0.45rem);
+left: 50%;
+transform: translateX(-50%);
+width: min(92vw, 430px);
+max-height: 75vh;
+overflow-y: auto;
+padding: 1.2rem;
+background: #ffffff;
+color: #263c48;
+border: 1px solid rgba(35, 55, 65, 0.18);
+border-radius: 18px;
+box-shadow: 0 14px 35px rgba(25, 42, 52, 0.2);
+z-index: 1100;
+}
+
+.accessibility-panel[hidden] {
+display: none;
+}
+
+.accessibility-panel-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 1rem;
+margin-bottom: 0.75rem;
+}
+
+.accessibility-panel-header h2 {
+margin: 0;
+font-size: 1.35rem;
+color: #263c48;
+}
+
+.accessibility-close {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 2.2rem;
+height: 2.2rem;
+border: 0;
+border-radius: 50%;
+background: #eef2f3;
+color: #263c48;
+font: inherit;
+font-size: 1.5rem;
+line-height: 1;
+cursor: pointer;
+}
+
+.accessibility-message {
+margin: 0 0 1rem;
+font-size: 0.93rem;
+line-height: 1.55;
+}
+
+.accessibility-section {
+padding: 1rem 0;
+border-top: 1px solid rgba(35, 55, 65, 0.13);
+}
+
+.accessibility-section h3,
+.keyboard-information h3 {
+margin: 0 0 0.65rem;
+font-size: 1rem;
+color: #263c48;
+}
+
+.accessibility-button-group {
+display: flex;
+flex-wrap: wrap;
+gap: 0.55rem;
+}
+
+.accessibility-button-group button,
+.contrast-toggle {
+border: 1.5px solid #315d72;
+background: #ffffff;
+color: #263c48;
+border-radius: 10px;
+padding: 0.55rem 0.75rem;
+font: inherit;
+font-size: 0.9rem;
+font-weight: 700;
+cursor: pointer;
+}
+
+.accessibility-button-group button:hover,
+.contrast-toggle:hover {
+background: #315d72;
+color: #ffffff;
+}
+
+.text-size-controls button {
+min-width: 3rem;
+font-size: 1rem;
+}
+
+.contrast-toggle {
+width: 100%;
+}
+
+.keyboard-information {
+padding-top: 1rem;
+border-top: 1px solid rgba(35, 55, 65, 0.13);
+}
+
+.keyboard-information p {
+margin: 0;
+font-size: 0.9rem;
+line-height: 1.55;
+}
+
+/* Visible keyboard focus */
+.accessibility-menu button:focus-visible,
+body a:focus-visible,
+body button:focus-visible,
+body input:focus-visible,
+body textarea:focus-visible,
+body select:focus-visible {
+outline: 3px solid #e9a923;
 outline-offset: 3px;
 }
 
-.text-size-label {
-margin-left: 0.5rem;
-font-weight: 700;
+/* =========================================
+TEXT-SIZE OPTIONS
+========================================= */
+
+html {
+font-size: 100%;
 }
 
-/* Font size settings applied by JavaScript */
+html.text-size-small {
+font-size: 93.75%;
+}
+
 html.text-size-large {
 font-size: 112.5%;
 }
@@ -3093,19 +3241,117 @@ html.text-size-extra-large {
 font-size: 125%;
 }
 
-@media (max-width: 700px) {
-.accessibility-toolbar {
-justify-content: flex-start;
-padding: 0.7rem;
+/* =========================================
+HIGH-CONTRAST MODE
+========================================= */
+
+html.high-contrast body {
+background: #000000 !important;
+color: #ffffff !important;
 }
 
-.accessibility-toolbar button {
+html.high-contrast body main,
+html.high-contrast body section,
+html.high-contrast body article,
+html.high-contrast body header,
+html.high-contrast body footer,
+html.high-contrast body nav,
+html.high-contrast body div {
+border-color: #ffffff;
+}
+
+html.high-contrast body main,
+html.high-contrast body section,
+html.high-contrast body article {
+background-color: #000000;
+color: #ffffff;
+}
+
+html.high-contrast body h1,
+html.high-contrast body h2,
+html.high-contrast body h3,
+html.high-contrast body h4,
+html.high-contrast body h5,
+html.high-contrast body h6,
+html.high-contrast body p,
+html.high-contrast body li,
+html.high-contrast body span,
+html.high-contrast body label,
+html.high-contrast body strong {
+color: #ffffff;
+}
+
+html.high-contrast body a {
+color: #ffff00 !important;
+text-decoration: underline;
+}
+
+html.high-contrast body button,
+html.high-contrast body .button,
+html.high-contrast body .btn {
+background: #000000 !important;
+color: #ffff00 !important;
+border: 2px solid #ffff00 !important;
+}
+
+html.high-contrast body input,
+html.high-contrast body textarea,
+html.high-contrast body select {
+background: #000000 !important;
+color: #ffffff !important;
+border: 2px solid #ffffff !important;
+}
+
+html.high-contrast body img {
+outline: 2px solid #ffffff;
+}
+
+html.high-contrast .accessibility-menu,
+html.high-contrast .accessibility-panel {
+background: #000000 !important;
+color: #ffffff !important;
+border-color: #ffffff !important;
+}
+
+html.high-contrast .accessibility-panel h2,
+html.high-contrast .accessibility-panel h3,
+html.high-contrast .accessibility-panel p,
+html.high-contrast .accessibility-panel strong {
+color: #ffffff !important;
+}
+
+html.high-contrast body *:focus-visible {
+outline: 4px solid #00ffff !important;
+outline-offset: 3px;
+}
+
+/* =========================================
+MOBILE ACCESSIBILITY MENU
+========================================= */
+
+@media (max-width: 600px) {
+.accessibility-menu {
+justify-content: flex-end;
 padding: 0.5rem 0.75rem;
-font-size: 0.9rem;
 }
 
-.text-size-label {
-width: 100%;
-margin: 0.2rem 0 0;
+.accessibility-toggle {
+padding: 0.4rem 0.7rem;
+font-size: 0.83rem;
+}
+
+.accessibility-panel {
+position: fixed;
+top: 1rem;
+right: 1rem;
+bottom: 1rem;
+left: 1rem;
+width: auto;
+max-height: none;
+transform: none;
+}
+
+.accessibility-button-group button {
+flex: 1 1 auto;
 }
 }
