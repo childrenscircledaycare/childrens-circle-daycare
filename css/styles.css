@@ -3042,3 +3042,70 @@ padding: 1.4rem;
 font-size: 1.3rem;
 }
 }
+/* =========================================
+ACCESSIBILITY TOOLBAR
+========================================= */
+
+.accessibility-toolbar {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 0.6rem;
+padding: 0.75rem 1rem;
+background: #f3f7f8;
+border-bottom: 1px solid rgba(35, 55, 65, 0.12);
+}
+
+.accessibility-toolbar button {
+border: 2px solid #315d72;
+background: #ffffff;
+color: #263c48;
+border-radius: 999px;
+padding: 0.55rem 0.9rem;
+font: inherit;
+font-weight: 700;
+cursor: pointer;
+}
+
+.accessibility-toolbar button:hover,
+.accessibility-toolbar button:focus-visible {
+background: #315d72;
+color: #ffffff;
+}
+
+.accessibility-toolbar button:focus-visible {
+outline: 3px solid #f2b84b;
+outline-offset: 3px;
+}
+
+.text-size-label {
+margin-left: 0.5rem;
+font-weight: 700;
+}
+
+/* Font size settings applied by JavaScript */
+html.text-size-large {
+font-size: 112.5%;
+}
+
+html.text-size-extra-large {
+font-size: 125%;
+}
+
+@media (max-width: 700px) {
+.accessibility-toolbar {
+justify-content: flex-start;
+padding: 0.7rem;
+}
+
+.accessibility-toolbar button {
+padding: 0.5rem 0.75rem;
+font-size: 0.9rem;
+}
+
+.text-size-label {
+width: 100%;
+margin: 0.2rem 0 0;
+}
+}
