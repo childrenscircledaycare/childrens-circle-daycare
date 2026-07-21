@@ -3355,3 +3355,35 @@ transform: none;
 flex: 1 1 auto;
 }
 }
+/* =========================================
+FIX NAVIGATION DROPDOWN ABOVE ACCESSIBILITY
+========================================= */
+
+/* Keep the main navigation above the accessibility menu */
+header,
+nav,
+.navbar,
+.nav-container,
+.site-header,
+.site-navigation {
+position: relative;
+z-index: 3000;
+}
+
+/* Make sure dropdown menus appear above everything */
+.dropdown,
+.dropdown-menu,
+.dropdown-content {
+position: relative;
+z-index: 4000;
+}
+
+/* Accessibility menu stays underneath the navigation */
+.accessibility-menu {
+position: relative;
+z-index: 1000;
+}
+
+.accessibility-panel {
+z-index: 2000;
+}
